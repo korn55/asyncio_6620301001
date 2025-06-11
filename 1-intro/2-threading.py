@@ -21,6 +21,7 @@ def make_burger(student_id):
 
 def main():
     start = time.time()
+    print(f"[{datetime.now().strftime('%H:%M:%S')}] เริ่มกระบวนการทำเบอร์เกอร์ทั้งหมด\n")
     
     threads = []
     for i in range(1, 4):
@@ -30,9 +31,11 @@ def main():
     
     for t in threads:
         t.join()
-    
+        print
+        print(f"[{datetime.now().strftime('%H:%M:%S')}] รวมเวลาทั้งหมด: {end - start:.2f} วินาที")
+        
     end = time.time()
-    print(f"[{datetime.now().strftime('%H:%M:%S')}] รวมเวลาทั้งหมด: {end - start:.2f} วินาที")
+    
 
 if __name__ == "__main__":
     main()
