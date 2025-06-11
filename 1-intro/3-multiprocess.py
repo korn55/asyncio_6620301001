@@ -31,7 +31,7 @@ def main():
     print(f"[{datetime.now().strftime('%H:%M:%S')}] 🍔 เริ่มกระบวนการทำเบอร์เกอร์ทั้งหมด\n")
     
     processes = []
-    for i in range(1, 4):
+    for i in range(1, 6):
         p = Process(target=make_burger, args=(i,))
         processes.append(p)
         p.start()
