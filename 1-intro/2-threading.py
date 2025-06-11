@@ -31,10 +31,17 @@ def main():
     
     for t in threads:
         t.join()
+        
+        end = time.time()
+        total_time = end - start
+        print(f"[{datetime.now().strftime('%H:%M:%S')}] รวมเวลาทั้งหมด: {end - start:.2f} วินาที")
+        
     
+
     end = time.time()
     total_time = end - start
     print(f"[{datetime.now().strftime('%H:%M:%S')}] รวมเวลาทั้งหมด: {end - start:.2f} วินาที")
+
 
 if __name__ == "__main__":
     main()
